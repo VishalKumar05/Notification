@@ -30,9 +30,6 @@ class MainActivity : AppCompatActivity() {
             true,
             observer)
 
-        //mReceiver = BroadcastChangeListener()
-        //registerReceiver(mReceiver, IntentFilter("com.android.tv.action.OPEN_NOTIFICATION"))
-
         button.setOnClickListener {
            navigateToNotifications()
         }
@@ -54,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        unregisterReceiver(mReceiver)
+        //unregisterReceiver(mReceiver)
     }
 
     private fun navigateToNotifications(){
@@ -64,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        //contentResolver.unregisterContentObserver(observer)
+        contentResolver.unregisterContentObserver(observer)
     }
 
 }

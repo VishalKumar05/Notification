@@ -25,6 +25,13 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--<receiver android:name=".BroadcastChangeListener">
+            <intent-filter>
+                <action android:name="content://com.android.tv.notifications.NotificationContentProvider/"/>
+            </intent-filter>
+        </receiver>-->
+
     </application>
 
 </manifest>
